@@ -1,198 +1,393 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pré-Inscrição | Processo Seletivo Educacional</title>
+<title>Pré-Inscrição | Processo Seletivo Educacional 2026</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1f2937;
+}
+
+.topo {
+    background: linear-gradient(135deg, #075aa6, #0876c9);
+    color: white;
+    padding: 28px 18px;
+}
+
+.topo-conteudo {
+    max-width: 760px;
+    margin: auto;
+}
+
+.identificacao {
+    font-size: 14px;
+    opacity: .95;
+    margin-bottom: 18px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.topo p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.status {
+    max-width: 760px;
+    margin: 22px auto 0;
+    padding: 0 15px;
+}
+
+.status-box {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    border-left: 5px solid #075aa6;
+}
+
+.status-titulo {
+    font-weight: bold;
+    color: #075aa6;
+    margin-bottom: 7px;
+}
+
+.container {
+    max-width: 760px;
+    margin: 18px auto 45px;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.etapa {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.card h2 {
+    margin: 7px 0 8px;
+    color: #12395b;
+    font-size: 23px;
+}
+
+.intro {
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 25px;
+}
+
+.obrigatorio {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.campo {
+    margin-bottom: 19px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bcc8d6;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    color: #1f2937;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #075aa6;
+    box-shadow: 0 0 0 3px rgba(7,90,166,.10);
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info {
+    background: #f5f9fd;
+    border: 1px solid #d9e7f3;
+    border-radius: 9px;
+    padding: 15px;
+    margin: 23px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background: #075aa6;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #064d8c;
+}
+
+#confirmacao {
+    display: none;
+    margin-top: 20px;
+    background: #ecfdf3;
+    border: 1px solid #a7e5bc;
+    color: #166534;
+    padding: 16px;
+    border-radius: 9px;
+    line-height: 1.5;
+}
+
+.rodape {
+    text-align: center;
+    color: #64748b;
+    padding: 5px 20px 35px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.rodape strong {
+    color: #475569;
+}
+
+@media(max-width:600px) {
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f5f8;
-      color: #1f2937;
-    }
-
-    header {
-      background: #075aa6;
-      color: white;
-      padding: 28px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 7px;
-      font-size: 26px;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 25px auto;
-      padding: 0 16px;
+    .topo h1 {
+        font-size: 24px;
     }
 
     .card {
-      background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+        padding: 20px;
     }
-
-    .tag {
-      display: inline-block;
-      background: #e8f2fc;
-      color: #075aa6;
-      padding: 7px 12px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      color: #075aa6;
-      margin-top: 0;
-    }
-
-    .intro {
-      line-height: 1.6;
-      margin-bottom: 22px;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin: 16px 0 7px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #bcc6d1;
-      border-radius: 6px;
-      font-size: 16px;
-      background: white;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 25px;
-      padding: 15px;
-      border: 0;
-      border-radius: 6px;
-      background: #075aa6;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #064c8b;
-    }
-
-    .notice {
-      margin-top: 24px;
-      background: #fff8df;
-      border-left: 4px solid #e3ad20;
-      padding: 14px;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      color: #667085;
-      font-size: 12px;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Pré-Inscrição</h1>
-  <p>Processo Seletivo Educacional • São Luís – MA</p>
+<header class="topo">
+    <div class="topo-conteudo">
+        <div class="identificacao">
+            Educação • São Luís – MA
+        </div>
+
+        <h1>Processo Seletivo Educacional 2026</h1>
+
+        <p>
+            Formulário eletrônico de pré-inscrição para participação
+            no processo de seleção.
+        </p>
+    </div>
 </header>
 
-<div class="container">
+<section class="status">
+    <div class="status-box">
+        <div class="status-titulo">
+            PERÍODO DE PRÉ-INSCRIÇÃO
+        </div>
 
-  <div class="card">
+        <strong>19 a 21 de setembro de 2026</strong><br>
+        Preencha seus dados corretamente antes de enviar.
+    </div>
+</section>
 
-    <div class="tag">PRÉ-INSCRIÇÃO</div>
+<main class="container">
 
-    <h2>Formulário de interesse</h2>
+<div class="card">
+
+    <div class="etapa">
+        Pré-inscrição • Etapa inicial
+    </div>
+
+    <h2>Dados do candidato</h2>
 
     <p class="intro">
-      Preencha corretamente as informações abaixo para registrar
-      seu interesse no processo seletivo educacional.
-      O preenchimento deste formulário não representa aprovação,
-      convocação ou contratação.
+        Informe os dados abaixo para registrar sua pré-inscrição.
+        Confira atentamente as informações antes do envio.
     </p>
 
-    <form>
+    <div class="obrigatorio">
+        Os campos identificados com * são obrigatórios.
+    </div>
 
-      <label for="nome">Nome completo *</label>
-      <input id="nome" name="nome" type="text" required>
+    <form id="formulario">
 
-      <label for="nascimento">Data de nascimento *</label>
-      <input id="nascimento" name="nascimento" type="date" required>
+        <div class="campo">
+            <label>Nome completo *</label>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                required>
+        </div>
 
-      <label for="email">E-mail *</label>
-      <input id="email" name="email" type="email" required>
+        <div class="linha">
 
-      <label for="telefone">Telefone / WhatsApp *</label>
-      <input id="telefone" name="telefone" type="tel" required>
+            <div class="campo">
+                <label>Data de nascimento *</label>
+                <input
+                    type="date"
+                    name="nascimento"
+                    required>
+            </div>
 
-      <label for="instituicao">Instituição de ensino *</label>
-      <input id="instituicao" name="instituicao" type="text" required>
+            <div class="campo">
+                <label>Telefone / WhatsApp *</label>
+                <input
+                    type="tel"
+                    name="telefone"
+                    placeholder="(98) 99999-9999"
+                    required>
+            </div>
 
-      <label for="curso">Curso de graduação *</label>
-      <input id="curso" name="curso" type="text" required>
+        </div>
 
-      <label for="periodo">Período / Semestre atual *</label>
-      <input id="periodo" name="periodo" type="text" required>
+        <div class="campo">
+            <label>E-mail *</label>
+            <input
+                type="email"
+                name="email"
+                placeholder="seuemail@exemplo.com"
+                required>
+        </div>
 
-      <label for="turno">Disponibilidade *</label>
-      <select id="turno" name="turno" required>
-        <option value="">Selecione</option>
-        <option>Manhã</option>
-        <option>Tarde</option>
-        <option>Manhã e tarde</option>
-      </select>
+        <div class="campo">
+            <label>Instituição de ensino *</label>
+            <input
+                type="text"
+                name="instituicao"
+                placeholder="Informe sua instituição"
+                required>
+        </div>
 
-      <button type="submit">
-        ENVIAR PRÉ-INSCRIÇÃO
-      </button>
+        <div class="campo">
+            <label>Curso de graduação *</label>
+            <input
+                type="text"
+                name="curso"
+                placeholder="Informe seu curso"
+                required>
+        </div>
+
+        <div class="linha">
+
+            <div class="campo">
+                <label>Período / Semestre atual *</label>
+                <input
+                    type="text"
+                    name="periodo"
+                    placeholder="Ex.: 2º período"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label>Turno de disponibilidade *</label>
+
+                <select name="disponibilidade" required>
+                    <option value="">Selecione</option>
+                    <option value="manha">
+                        Manhã — 07:30 às 11:30
+                    </option>
+                    <option value="tarde">
+                        Tarde — 13:30 às 17:30
+                    </option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="campo">
+            <label>Observações (opcional)</label>
+            <input
+                type="text"
+                name="observacoes"
+                placeholder="Informação adicional, se necessário">
+        </div>
+
+        <div class="info">
+            <strong>Importante:</strong>
+            o preenchimento desta etapa registra apenas uma
+            pré-inscrição e não representa aprovação, classificação
+            ou contratação.
+        </div>
+
+        <button type="submit">
+            ENVIAR PRÉ-INSCRIÇÃO
+        </button>
+
+        <div id="confirmacao">
+            <strong>Pré-inscrição preenchida.</strong><br>
+            Os dados foram validados nesta página.
+        </div>
 
     </form>
 
-    <div class="notice">
-      <strong>Aviso:</strong>
-      esta é uma página independente de pré-inscrição e não constitui
-      portal oficial da Prefeitura de São Luís, SEMED ou Universidade CEUMA.
-      Não informe CPF, matrícula, senhas, dados bancários ou documentos
-      pessoais neste formulário.
-    </div>
-
-  </div>
-
 </div>
 
-<footer>
-  Pré-inscrição educacional • São Luís – MA
+</main>
+
+<footer class="rodape">
+    <strong>Página independente de pré-inscrição</strong><br>
+    São Luís – MA • Processo Seletivo Educacional 2026
 </footer>
+
+<script>
+document
+.getElementById("formulario")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document.getElementById("confirmacao").style.display = "block";
+
+    document.getElementById("confirmacao")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+});
+</script>
 
 </body>
 </html>
