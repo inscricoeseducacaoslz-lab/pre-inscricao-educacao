@@ -4,201 +4,427 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pré-Inscrição | Processo Seletivo Educacional 2026</title>
+<title>Pré-Inscrição | Processo Seletivo 2026</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f1f5f9;
-    color: #1f2937;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f7;
+    color:#1e293b;
 }
 
-.topo {
-    background: linear-gradient(135deg, #075aa6, #0876c9);
-    color: white;
-    padding: 28px 18px;
+/* CABEÇALHO */
+
+.topo{
+    background:
+        linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.82)),
+        linear-gradient(135deg,#dbeafe,#ffffff);
+    border-bottom:4px solid #f5c400;
 }
 
-.topo-conteudo {
-    max-width: 760px;
-    margin: auto;
+.topo-conteudo{
+    max-width:1050px;
+    margin:auto;
+    min-height:130px;
+    padding:25px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.identificacao {
-    font-size: 14px;
-    opacity: .95;
-    margin-bottom: 18px;
+.marca{
+    display:flex;
+    align-items:center;
+    gap:22px;
 }
 
-.topo h1 {
-    margin: 0;
-    font-size: 28px;
-    line-height: 1.2;
+.prefeitura{
+    font-weight:900;
+    color:#0877bd;
+    font-size:22px;
+    line-height:1.05;
 }
 
-.topo p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
+.prefeitura strong{
+    display:block;
+    font-size:35px;
+    color:#0b78bb;
 }
 
-.status {
-    max-width: 760px;
-    margin: 22px auto 0;
-    padding: 0 15px;
+.semed{
+    border-left:1px solid #cbd5e1;
+    padding-left:22px;
+    color:#075b99;
+    font-size:15px;
 }
 
-.status-box {
-    background: white;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.07);
-    border-left: 5px solid #075aa6;
+.semed strong{
+    display:block;
+    font-size:28px;
 }
 
-.status-titulo {
-    font-weight: bold;
-    color: #075aa6;
-    margin-bottom: 7px;
+.slogan{
+    color:#0572b5;
+    font-size:22px;
+    font-weight:700;
+    font-style:italic;
+    text-align:right;
 }
 
-.container {
-    max-width: 760px;
-    margin: 18px auto 45px;
-    padding: 0 15px;
+/* AVISO */
+
+.aviso{
+    max-width:1050px;
+    margin:18px auto 0;
+    padding:0 20px;
 }
 
-.card {
-    background: white;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+.aviso div{
+    background:#fff8dc;
+    border:1px solid #f0d878;
+    border-radius:10px;
+    padding:11px 15px;
+    font-size:13px;
+    color:#65520b;
+    text-align:center;
 }
 
-.etapa {
-    font-size: 13px;
-    color: #64748b;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .5px;
+/* HERO */
+
+.hero{
+    max-width:1050px;
+    margin:18px auto;
+    padding:0 20px;
 }
 
-.card h2 {
-    margin: 7px 0 8px;
-    color: #12395b;
-    font-size: 23px;
+.hero-box{
+    min-height:270px;
+    border-radius:18px;
+    padding:38px;
+    color:white;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(125deg,#0754a1,#0079c8 58%,#00a0d5);
+    box-shadow:0 12px 30px rgba(0,70,130,.18);
 }
 
-.intro {
-    color: #64748b;
-    line-height: 1.55;
-    margin-bottom: 25px;
+.hero-box:after{
+    content:"";
+    position:absolute;
+    width:330px;
+    height:330px;
+    right:-90px;
+    top:-70px;
+    border:2px solid rgba(255,255,255,.13);
+    border-radius:50%;
 }
 
-.obrigatorio {
-    color: #64748b;
-    font-size: 13px;
-    margin-bottom: 22px;
+.hero-box:before{
+    content:"";
+    position:absolute;
+    width:210px;
+    height:210px;
+    right:80px;
+    bottom:-125px;
+    border:2px solid rgba(255,255,255,.12);
+    border-radius:50%;
 }
 
-.campo {
-    margin-bottom: 19px;
+.hero-pequeno{
+    letter-spacing:5px;
+    font-size:16px;
+    font-weight:bold;
 }
 
-label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 7px;
+.hero h1{
+    font-size:56px;
+    line-height:1;
+    margin:12px 0 14px;
 }
 
-input, select {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #bcc8d6;
-    border-radius: 8px;
-    background: white;
-    font-size: 16px;
-    color: #1f2937;
-    outline: none;
+.linha-amarela{
+    width:72px;
+    height:7px;
+    background:#ffd21a;
+    border-radius:8px;
+    margin:15px 0;
 }
 
-input:focus, select:focus {
-    border-color: #075aa6;
-    box-shadow: 0 0 0 3px rgba(7,90,166,.10);
+.hero p{
+    font-size:19px;
+    line-height:1.5;
+    max-width:650px;
+    margin:0;
 }
 
-.linha {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+/* CARDS */
+
+.cards{
+    max-width:1050px;
+    margin:0 auto 20px;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
-.info {
-    background: #f5f9fd;
-    border: 1px solid #d9e7f3;
-    border-radius: 9px;
-    padding: 15px;
-    margin: 23px 0;
-    font-size: 14px;
-    line-height: 1.5;
+.card{
+    background:white;
+    min-height:125px;
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    gap:13px;
+    box-shadow:0 4px 15px rgba(15,55,90,.06);
+    border:1px solid #e5edf4;
 }
 
-button {
-    width: 100%;
-    border: none;
-    background: #075aa6;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 16px;
-    border-radius: 9px;
-    cursor: pointer;
+.icone{
+    color:#0573b7;
+    font-size:29px;
 }
 
-button:hover {
-    background: #064d8c;
+.card strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:10px;
 }
 
-#confirmacao {
-    display: none;
-    margin-top: 20px;
-    background: #ecfdf3;
-    border: 1px solid #a7e5bc;
-    color: #166534;
-    padding: 16px;
-    border-radius: 9px;
-    line-height: 1.5;
+.card span{
+    font-size:14px;
+    line-height:1.4;
 }
 
-.rodape {
-    text-align: center;
-    color: #64748b;
-    padding: 5px 20px 35px;
-    font-size: 13px;
-    line-height: 1.6;
+.destaque-data{
+    color:#075ea4;
+    font-size:18px !important;
+    font-weight:bold;
 }
 
-.rodape strong {
-    color: #475569;
+/* FORMULÁRIO */
+
+.formulario{
+    max-width:1050px;
+    margin:auto;
+    padding:0 20px 35px;
 }
 
-@media(max-width:600px) {
-    .linha {
-        grid-template-columns: 1fr;
-        gap: 0;
+.bloco{
+    background:white;
+    border:1px solid #dde6ee;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.035);
+}
+
+.titulo-bloco{
+    color:#075f9e;
+    font-size:20px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.campo{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid #cfd9e3;
+    border-radius:8px;
+    padding:14px;
+    font-size:15px;
+    background:#fff;
+    color:#263442;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#0879bd;
+    box-shadow:0 0 0 3px rgba(8,121,189,.1);
+}
+
+textarea{
+    resize:vertical;
+    min-height:95px;
+}
+
+.opcoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:17px 25px;
+    padding:10px 0;
+}
+
+.opcao{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:14px;
+}
+
+.opcao input{
+    width:19px;
+    height:19px;
+    margin:0;
+}
+
+/* BOTÃO */
+
+.botao{
+    width:100%;
+    border:0;
+    border-radius:10px;
+    padding:19px;
+    background:linear-gradient(90deg,#0877bd,#0795d3);
+    color:white;
+    font-size:19px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,115,180,.2);
+}
+
+.botao:hover{
+    filter:brightness(.96);
+}
+
+/* RODAPÉ */
+
+.rodape{
+    background:white;
+    border-top:1px solid #dce5ec;
+    padding:27px 20px;
+}
+
+.rodape-conteudo{
+    max-width:1010px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.rodape-marca{
+    color:#075f9e;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+.independente{
+    text-align:right;
+    color:#64748b;
+    font-size:13px;
+    line-height:1.5;
+    max-width:480px;
+}
+
+/* CELULAR */
+
+@media(max-width:750px){
+
+    .topo-conteudo{
+        min-height:auto;
+        padding:22px;
+        align-items:flex-start;
     }
 
-    .topo h1 {
-        font-size: 24px;
+    .marca{
+        display:block;
     }
 
-    .card {
-        padding: 20px;
+    .semed{
+        border:0;
+        padding:7px 0 0;
+    }
+
+    .slogan{
+        font-size:15px;
+    }
+
+    .prefeitura{
+        font-size:15px;
+    }
+
+    .prefeitura strong{
+        font-size:25px;
+    }
+
+    .semed strong{
+        font-size:21px;
+    }
+
+    .hero-box{
+        min-height:300px;
+        padding:30px 24px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .hero-pequeno{
+        font-size:13px;
+        letter-spacing:3px;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .grid2{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .rodape-conteudo{
+        display:block;
+    }
+
+    .independente{
+        text-align:left;
+        margin-top:15px;
+    }
+}
+
+@media(max-width:480px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .slogan{
+        display:none;
     }
 }
 </style>
@@ -208,50 +434,105 @@ button:hover {
 
 <header class="topo">
     <div class="topo-conteudo">
-        <div class="identificacao">
-            Educação • São Luís – MA
+
+        <div class="marca">
+            <div class="prefeitura">
+                PREFEITURA DE
+                <strong>SÃO LUÍS</strong>
+            </div>
+
+            <div class="semed">
+                <strong>SEMED</strong>
+                Secretaria Municipal<br>
+                de Educação
+            </div>
         </div>
 
-        <h1>Processo Seletivo Educacional 2026</h1>
+        <div class="slogan">
+            Educação<br>
+            que transforma
+        </div>
 
-        <p>
-            Formulário eletrônico de pré-inscrição para participação
-            no processo de seleção.
-        </p>
     </div>
 </header>
 
-<section class="status">
-    <div class="status-box">
-        <div class="status-titulo">
-            PERÍODO DE PRÉ-INSCRIÇÃO
+<div class="aviso">
+    <div>
+        <strong>Página independente.</strong>
+        Esta página não é um portal oficial da Prefeitura de São Luís ou da SEMED.
+    </div>
+</div>
+
+<section class="hero">
+    <div class="hero-box">
+
+        <div class="hero-pequeno">
+            PROCESSO SELETIVO 2026
         </div>
 
-        <strong>19 a 21 de setembro de 2026</strong><br>
-        Preencha seus dados corretamente antes de enviar.
+        <h1>Pré-inscrição</h1>
+
+        <div class="linha-amarela"></div>
+
+        <p>
+            Espaço de pré-inscrição destinado a estudantes interessados
+            em oportunidades relacionadas à área da educação em São Luís – MA.
+        </p>
+
     </div>
 </section>
 
-<main class="container">
+<section class="cards">
 
-<div class="card">
-
-    <div class="etapa">
-        Pré-inscrição • Etapa inicial
+    <div class="card">
+        <div class="icone">▣</div>
+        <div>
+            <strong>Período de pré-inscrição</strong>
+            <span class="destaque-data">19/09 a 21/09</span><br>
+            <span>de 2026</span>
+        </div>
     </div>
 
-    <h2>Dados do candidato</h2>
-
-    <p class="intro">
-        Informe os dados abaixo para registrar sua pré-inscrição.
-        Confira atentamente as informações antes do envio.
-    </p>
-
-    <div class="obrigatorio">
-        Os campos identificados com * são obrigatórios.
+    <div class="card">
+        <div class="icone">♟</div>
+        <div>
+            <strong>Público-alvo</strong>
+            <span>
+                Estudantes de graduação em cursos relacionados à educação
+            </span>
+        </div>
     </div>
 
-    <form id="formulario">
+    <div class="card">
+        <div class="icone">◷</div>
+        <div>
+            <strong>Disponibilidade</strong>
+            <span>
+                Manhã<br>
+                07h30 às 12h00
+            </span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="icone">▤</div>
+        <div>
+            <strong>Etapas</strong>
+            <span>
+                Análise das informações e demais etapas conforme orientações do processo.
+            </span>
+        </div>
+    </div>
+
+</section>
+
+<form class="formulario" id="formPreInscricao">
+
+    <section class="bloco">
+
+        <div class="titulo-bloco">
+            👤 Dados do candidato
+        </div>
 
         <div class="campo">
             <label>Nome completo *</label>
@@ -262,15 +543,7 @@ button:hover {
                 required>
         </div>
 
-        <div class="linha">
-
-            <div class="campo">
-                <label>Data de nascimento *</label>
-                <input
-                    type="date"
-                    name="nascimento"
-                    required>
-            </div>
+        <div class="grid2">
 
             <div class="campo">
                 <label>Telefone / WhatsApp *</label>
@@ -281,111 +554,195 @@ button:hover {
                     required>
             </div>
 
-        </div>
-
-        <div class="campo">
-            <label>E-mail *</label>
-            <input
-                type="email"
-                name="email"
-                placeholder="seuemail@exemplo.com"
-                required>
-        </div>
-
-        <div class="campo">
-            <label>Instituição de ensino *</label>
-            <input
-                type="text"
-                name="instituicao"
-                placeholder="Informe sua instituição"
-                required>
-        </div>
-
-        <div class="campo">
-            <label>Curso de graduação *</label>
-            <input
-                type="text"
-                name="curso"
-                placeholder="Informe seu curso"
-                required>
-        </div>
-
-        <div class="linha">
-
             <div class="campo">
-                <label>Período / Semestre atual *</label>
+                <label>E-mail *</label>
                 <input
-                    type="text"
-                    name="periodo"
-                    placeholder="Ex.: 2º período"
+                    type="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com.br"
                     required>
             </div>
 
-            <div class="campo">
-                <label>Turno de disponibilidade *</label>
+        </div>
 
-                <select name="disponibilidade" required>
+    </section>
+
+    <section class="bloco">
+
+        <div class="titulo-bloco">
+            🎓 Informações acadêmicas
+        </div>
+
+        <div class="grid2">
+
+            <div class="campo">
+                <label>Instituição de ensino</label>
+                <input
+                    type="text"
+                    name="instituicao"
+                    placeholder="Ex.: UFMA, CEUMA, Laboro...">
+            </div>
+
+            <div class="campo">
+                <label>Curso</label>
+                <input
+                    type="text"
+                    name="curso"
+                    placeholder="Ex.: Pedagogia">
+            </div>
+
+            <div class="campo">
+                <label>Período/semestre</label>
+
+                <select name="periodo">
                     <option value="">Selecione</option>
-                    <option value="manha">
-                        Manhã — 07:30 às 11:30
-                    </option>
-                    <option value="tarde">
-                        Tarde — 13:30 às 17:30
-                    </option>
+                    <option>1º período</option>
+                    <option>2º período</option>
+                    <option>3º período</option>
+                    <option>4º período</option>
+                    <option>5º período</option>
+                    <option>6º período</option>
+                    <option>7º período</option>
+                    <option>8º período</option>
+                    <option>9º período</option>
+                    <option>10º período</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Turno</label>
+
+                <select name="turno">
+                    <option value="">Selecione</option>
+                    <option>Matutino</option>
+                    <option>Vespertino</option>
+                    <option>Noturno</option>
+                    <option>Integral</option>
                 </select>
             </div>
 
         </div>
 
+    </section>
+
+    <section class="bloco">
+
+        <div class="titulo-bloco">
+            ◷ Disponibilidade
+        </div>
+
+        <div class="grid2">
+
+            <div>
+                <label>Turnos de interesse</label>
+
+                <div class="opcoes">
+
+                    <label class="opcao">
+                        <input type="checkbox" name="horario" value="Manhã">
+                        Manhã (07h30 às 12h00)
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" name="horario" value="Tarde">
+                        Tarde (13h30 às 17h30)
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" name="horario" value="Ambos">
+                        Ambos
+                    </label>
+
+                </div>
+            </div>
+
+            <div>
+                <label>Dias disponíveis</label>
+
+                <div class="opcoes">
+
+                    <label class="opcao">
+                        <input type="checkbox" name="dia" value="Segunda-feira">
+                        Segunda-feira
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" name="dia" value="Quarta-feira">
+                        Quarta-feira
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" name="dia" value="Sexta-feira">
+                        Sexta-feira
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" name="dia" value="Outros">
+                        Outros
+                    </label>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bloco">
+
+        <div class="titulo-bloco">
+            📄 Informações complementares
+            <span style="font-weight:normal;color:#64748b;">
+                (opcional)
+            </span>
+        </div>
+
         <div class="campo">
-            <label>Observações (opcional)</label>
-            <input
-                type="text"
+
+            <label>Observações</label>
+
+            <textarea
                 name="observacoes"
-                placeholder="Informação adicional, se necessário">
+                placeholder="Caso queira acrescentar alguma informação, utilize este campo."></textarea>
+
         </div>
 
-        <div class="info">
-            <strong>Importante:</strong>
-            o preenchimento desta etapa registra apenas uma
-            pré-inscrição e não representa aprovação, classificação
-            ou contratação.
-        </div>
+    </section>
 
-        <button type="submit">
-            ENVIAR PRÉ-INSCRIÇÃO
-        </button>
+    <button class="botao" type="submit">
+        ✈ ENVIAR PRÉ-INSCRIÇÃO
+    </button>
 
-        <div id="confirmacao">
-            <strong>Pré-inscrição preenchida.</strong><br>
-            Os dados foram validados nesta página.
-        </div>
-
-    </form>
-
-</div>
-
-</main>
+</form>
 
 <footer class="rodape">
-    <strong>Página independente de pré-inscrição</strong><br>
-    São Luís – MA • Processo Seletivo Educacional 2026
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-marca">
+            SÃO LUÍS<br>
+            <span style="font-size:13px;font-weight:normal;">
+                Referência visual à área de Educação
+            </span>
+        </div>
+
+        <div class="independente">
+            <strong>Página independente de pré-inscrição.</strong><br>
+            Não constitui portal oficial da Prefeitura de São Luís ou da
+            Secretaria Municipal de Educação – SEMED.
+        </div>
+
+    </div>
+
 </footer>
 
 <script>
-document
-.getElementById("formulario")
-.addEventListener("submit", function(event) {
-
+document.getElementById("formPreInscricao").addEventListener("submit", function(event){
     event.preventDefault();
 
-    document.getElementById("confirmacao").style.display = "block";
-
-    document.getElementById("confirmacao")
-        .scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+    alert(
+        "Formulário preenchido. O envio eletrônico ainda precisa ser conectado ao sistema de recebimento das inscrições."
+    );
 });
 </script>
 
