@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pré-Inscrição | Processo Seletivo Educacional</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f5f8;
+      color: #1f2937;
+    }
+
+    header {
+      background: #075aa6;
+      color: white;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 7px;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 25px auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f2fc;
+      color: #075aa6;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #075aa6;
+      margin-top: 0;
+    }
+
+    .intro {
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 16px 0 7px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #bcc6d1;
+      border-radius: 6px;
+      font-size: 16px;
+      background: white;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 15px;
+      border: 0;
+      border-radius: 6px;
+      background: #075aa6;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #064c8b;
+    }
+
+    .notice {
+      margin-top: 24px;
+      background: #fff8df;
+      border-left: 4px solid #e3ad20;
+      padding: 14px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #667085;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pré-Inscrição</h1>
+  <p>Processo Seletivo Educacional • São Luís – MA</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <div class="tag">PRÉ-INSCRIÇÃO</div>
+
+    <h2>Formulário de interesse</h2>
+
+    <p class="intro">
+      Preencha corretamente as informações abaixo para registrar
+      seu interesse no processo seletivo educacional.
+      O preenchimento deste formulário não representa aprovação,
+      convocação ou contratação.
+    </p>
+
+    <form>
+
+      <label for="nome">Nome completo *</label>
+      <input id="nome" name="nome" type="text" required>
+
+      <label for="nascimento">Data de nascimento *</label>
+      <input id="nascimento" name="nascimento" type="date" required>
+
+      <label for="email">E-mail *</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="telefone">Telefone / WhatsApp *</label>
+      <input id="telefone" name="telefone" type="tel" required>
+
+      <label for="instituicao">Instituição de ensino *</label>
+      <input id="instituicao" name="instituicao" type="text" required>
+
+      <label for="curso">Curso de graduação *</label>
+      <input id="curso" name="curso" type="text" required>
+
+      <label for="periodo">Período / Semestre atual *</label>
+      <input id="periodo" name="periodo" type="text" required>
+
+      <label for="turno">Disponibilidade *</label>
+      <select id="turno" name="turno" required>
+        <option value="">Selecione</option>
+        <option>Manhã</option>
+        <option>Tarde</option>
+        <option>Manhã e tarde</option>
+      </select>
+
+      <button type="submit">
+        ENVIAR PRÉ-INSCRIÇÃO
+      </button>
+
+    </form>
+
+    <div class="notice">
+      <strong>Aviso:</strong>
+      esta é uma página independente de pré-inscrição e não constitui
+      portal oficial da Prefeitura de São Luís, SEMED ou Universidade CEUMA.
+      Não informe CPF, matrícula, senhas, dados bancários ou documentos
+      pessoais neste formulário.
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Pré-inscrição educacional • São Luís – MA
+</footer>
+
+</body>
+</html>
